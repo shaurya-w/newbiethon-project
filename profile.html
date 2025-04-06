@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    
+    <style>
+        :root {
+    --pale-blue: #EFFAFD;
+    --royal-blue: #4A8BDF;
+    --eggplant: #A0006D;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--pale-blue);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    border: 1px solid var(--royal-blue);
+    padding: 25px;
+    box-shadow: 0 4px 15px var(--shadow);
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--eggplant);
+    margin-bottom: 15px;
+}
+
+.signout-btn {
+    background-color: var(--royal-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.signout-btn:hover {
+    background-color: var(--eggplant);
+}
+
+.profile-photo {
+    display: block;
+    margin: 20px auto 10px auto;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid var(--royal-blue);
+}
+
+.username {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--eggplant);
+    margin-top: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid var(--shadow);
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--royal-blue);
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--eggplant);
+}
+
+.my-stories,
+.tbr,
+.saved-stories,
+.drafts {
+    margin: 40px auto 20px;
+    max-width: 800px;
+    padding: 20px;
+    background-color: var(--pale-blue);
+    border-radius: 8px;
+}
+
+.my-stories h2,
+.tbr h2,
+.saved-stories h2,
+.drafts h2 {
+    color: var(--eggplant);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.story {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px var(--shadow);
+    margin-bottom: 15px;
+    transition: transform 0.2s ease;
+}
+
+.story:hover {
+    transform: scale(1.01);
+}
+
+.story img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.story h3 {
+    color: var(--royal-blue);
+    margin: 0 0 5px;
+}
+
+.story p {
+    color: var(--eggplant);
+    margin: 0 0 10px;
+}
+
+.story button {
+    background-color: var(--royal-blue);
+    color: var(--white);
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.story button:hover {
+    background-color: var(--eggplant);
+}
+
+.sign-in {
+    color: var(--eggplant);
+    text-align: center;
+}
+
+.sign-in-form {
+    display: flex;
+    width: 40vmin;
+    margin: 0 auto;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.sign-in-form input {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid var(--royal-blue);
+    border-radius: 5px;
+    width: 80%;
+    text-align: left;
+}
+
+.sign-in-form button {
+    background-color: var(--royal-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Profile</h1>
+            <button class="signout-btn" onclick="signInPrompt();">Sign Out</button>
+        </div>
+        <div class="details">
+            <img class="profile-photo" src="images/profile .jpg" alt="Profile Photo">
+            <div class="username">Username</div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">1234</div>
+                    <div class="stat-label">Views</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5678</div>
+                    <div class="stat-label">Followers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">91011</div>
+                    <div class="stat-label">Upvotes</div>
+                </div>
+            </div>
+        </div>            
+    </div>
+
+    <div class="saved-stories">
+        <h2>My saved stories</h2>
+        <div class="story">
+    <div> 
+
+    <div class="drafts">
+        <h2>My drafts</h2>
+        <div class="story">
+    <div>   
+
+    <script>
+        function signInPrompt() {
+            const prompt = `
+                <h1 class="sign-in">Sign In</h1>
+                <form class="sign-in-form">
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username"><br><br>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password"><br><br>
+                    <button type="submit">Sign In</button>
+                </form>`;
+            document.querySelector('.container').innerHTML = prompt;
+        }
+
+    </script>
+</body>
+</html>

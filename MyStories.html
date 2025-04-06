@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Story | StoryWeave</title>
+
+    <link rel="stylesheet" href="story.css">
+    
+<body>
+    <header>
+        <h1>Create Your Story</h1>
+    </header>
+    <main>
+        <div class="form-container">
+            <form id="storyForm">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Untitled Story" required>
+            
+                <label for="story-content">Start Writing Your Story:</label>
+                <textarea id="story-content" name="story-content" rows="10" required></textarea>
+                
+                <label for="category">Category</label>
+                <select id="category" required>
+                    <option value="">Select a category</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="sci-fi">Sci-Fi</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="horror">Horror</option>
+                    <option value="romance">Romance</option>
+                </select>
+                
+                <label for="audience">Target Audience</label>
+                <select id="audience" required>
+                    <option value="">Who is your primary audience?</option>
+                    <option value="kids">Kids</option>
+                    <option value="teens">Teens</option>
+                    <option value="adults">Adults</option>
+                </select>
+            
+                <label for="language">Language</label>
+                <select id="language">
+                    <option value="english">English</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="french">French</option>
+                </select>
+            
+                <label for="copyright">Copyright</label>
+                <select id="copyright">
+                    <option value="all-rights">All Rights Reserved</option>
+                    <option value="cc">Creative Commons</option>
+                    <option value="public-domain">Public Domain</option>
+                </select>
+            
+                <button type="submit">Publish</button>
+                <button type="button" id="saveDraft" onclick="saveDraft();">Save as Draft</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
